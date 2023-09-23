@@ -1,0 +1,50 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    background-color: #31353b;
+    background-image: url(https://assets.pokemon.com/static2/_ui/img/chrome/body_bg.png);  
+ 
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0.67em 0;
+    text-align: center;
+    color: red;
+}
+h1 img {
+ 
+    width: 30px;
+    margin: 0px 5px 0px 5px;
+
+}
+
+
+.content {
+    width: 100vw;
+    height: 100%;
+    padding: 1rem;
+    background-color: #fff;
+    background-image: url(https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png);  
+}
+
+@media screen and (min-width: 992px) {
+    .content {
+        max-width: 992px;
+        height: auto;
+        margin: 1rem auto;
+        border-radius: 1rem;
+        background-image: url(https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png);  
+    }
+    h1 {
+        font-size: 3em;
+        margin: 0.67em 0;
+        text-align: center;
+        color: red;
+    }
+}
