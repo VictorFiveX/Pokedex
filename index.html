@@ -6,18 +6,17 @@
     
     <title>Pokedex</title>
     
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" 
-        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/601px-Pokebola-pokeball-png-0.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <!-- fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+            <!-- CSS -->
     <link rel="stylesheet" href="assets/css/pokedex.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
 </head>
 <body>
         
@@ -26,12 +25,20 @@
         <ol id="pokemonList" class="pokemons">
             <!--  Pokemons  -->
         </ol>
-        <div class="pagination">
-            <button id="loadMoreButton" type="button">
-                Carregar mais
-            </button>
-        </div>
+
   </Section>
+
+  <div class="modal" id="modal-id">
+    <div id="modalpoke">Pokemon com detalhes
+        <input type="button" value="X" class="closeButton">
+    </div>
+</div>
+
+  <div class="pagination">
+    <button id="loadMoreButton" type="button">
+        Carregar mais
+    </button>
+</div>
   <script src="assets/js/pokemon-model.js"></script>
   <script src="assets/js/poke-api.js"></script>
   <script src="assets/js/main.js"></script>
