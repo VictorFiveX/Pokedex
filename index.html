@@ -19,13 +19,50 @@
     
 </head>
 <body>
-        
+
   <Section class="content">
         <h1> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/601px-Pokebola-pokeball-png-0.png" alt="">Pokedex<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/601px-Pokebola-pokeball-png-0.png" alt=""></h1>
+        <div id="divBusca">
+            <input type="text" id="txtBusca" placeholder="Buscar..."/>
+            <button id="btnBusca">Buscar</button>
+          </div>
+          <div class="optionsDiv">
+            <div class="select">
+                <select name="filter-poke" id="poke-type-filter" >
+                   <!-- <option selected disabled >Choose a Type</option>
+                    <option>all</option> -->
+                    <option value="all">Todos os tipos</option>
+                    <option value="bug">bug</option>
+                    <option value="dragon">dragon</option>
+                    <option value="electric">electric</option>
+                    <option value="fairy">fairy</option>
+                    <option value="fighting">fighting</option>
+                    <option value="fire">fire</option>
+                    <option value="flying">flying</option>
+                    <option value="ghost">ghost</option>
+                    <option value="grass">grass</option>
+                    <option value="ground">ground</option>
+                    <option value="ice">ice</option>
+                    <option value="normal">normal</option>
+                    <option value="poison">poison</option>
+                    <option value="psychic">psychic</option>
+                    <option value="rock">rock</option>
+                    <option value="steel">steel</option>
+                    <option value="water">water</option>
+                </select>
+            </div>
+            <!-- <div>
+                <input class="seasons-btn" id="firstSeasonBtn" type="button" value="Show All">    
+            </div> -->
+        </div>
         <ol id="pokemonList" class="pokemons">
             <!--  Pokemons  -->
         </ol>
-
+        <div class="pagination">
+            <button id="loadMoreButton" type="button">
+                Carregar mais
+            </button>
+        </div>
   </Section>
 
   <div class="modal" id="modal-id">
@@ -34,11 +71,7 @@
     </div>
 </div>
 
-  <div class="pagination">
-    <button id="loadMoreButton" type="button">
-        Carregar mais
-    </button>
-</div>
+
   <script src="assets/js/pokemon-model.js"></script>
   <script src="assets/js/poke-api.js"></script>
   <script src="assets/js/main.js"></script>
