@@ -184,11 +184,25 @@ function filterByName() {
     console.log(pokemonElements);
 
     pokemonElements.forEach(function (element) {
-        const pokemonName = element.querySelector('.name').textContent.toLowerCase(); // Obtém o nome do Pokémon dentro do elemento
+        const pokemonName = element.querySelector('.name').textContent.toLowerCase(); // Obtém o nome do Pokémon 
         if (pokemonName.includes(nameFilterValue) || nameFilterValue === '') {
-            element.style.display = 'flex'; // Exibe o elemento se o nome corresponder ao filtro ou se o filtro estiver vazio
+            element.style.display = 'flex'; // Exibe 
         } else {
-            element.style.display = 'none'; // Oculta o elemento se o nome não corresponder ao filtro
+            element.style.display = 'none'; // Oculta 
         }
+
+    // Define o valor do elemento 
+    const pokeTypeFilter = document.getElementById('poke-type-filter');
+    pokeTypeFilter.value = "all";
+
+    // Atualiza visualmente o elemento 
+    const selectLabel = document.querySelector('.select .selected-label');
+    selectLabel.textContent = "";
+
+    // Força a atualização do elemento 
+    pokeTypeFilter.blur(); // Remove o foco
+    pokeTypeFilter.focus(); // Reativa o foco
+
+
     });
 } 
