@@ -164,15 +164,14 @@
 @media only screen and (max-width: 992px){
     .pokemons{
         display: grid;
-        grid-template-columns:  1fr 1fr 1fr;
-        margin: 0;
-        
+        grid-template-columns: 1fr 1fr;
+        margin: 1rem;      
     }
 } 
 @media only screen and (max-width: 650px){
     .pokemons{
-        grid-template-columns: 1fr 1fr;
-        margin: 0; 
+        grid-template-columns: 1fr;
+        margin: 0;
     }
 }
 @media only screen and (max-width: 410px){

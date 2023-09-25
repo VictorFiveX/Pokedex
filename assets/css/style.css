@@ -37,27 +37,31 @@ h1 img {
 /* Menu de busca */
 
 #divBusca{
-    background-color:#E0EEEE;
-    border:solid 2px #5F9EA0;
-    border-radius:10px;
-    width:300px;
-    height:32px;
+    background-color: #ff00004d;
+    border: solid 2px #ff0000;
+    border-radius: 10px;
+    width: 300px;
+    height: 32px;
     display: flex;
     align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
     margin: auto;
     margin-bottom: 10px;
-  }
+    justify-content: space-between;
+}
   
   #txtBusca{
-    float:left;
-    background-color:transparent;
-    font-size:18px;
-    border:none;
-    height:32px;
-    width:191px;
-  }
+    outline: none;
+    margin-left: 0.5rem;
+    float: left;
+    background-color: transparent;
+    font-size: 18px;
+    border: none;
+    height: 27px;
+    width: auto;
+}
+  
   
   #btnBusca{
     border:none;
@@ -66,8 +70,7 @@ h1 img {
     border-radius:0 7px 7px 0;
     width:70px;
     font-weight:bold;
-    background:#5F9EA0;
-    margin-left: 3rem;
+    background:#ffffff00;
   }
   
 
@@ -391,13 +394,11 @@ select::-ms-expand{
 .select{
     position: relative;
     display: flex;
-    width: 12rem;
-    background: #0000004d;
-    margin: 0 0 1rem;
+    width: 14rem;
+    background: #ff002d;
     font-size: 1rem;
     overflow: hidden;
     border-radius: 1rem;
-    text-align: left;
 }
 .select::after{
     content: "\25BC";
@@ -424,10 +425,10 @@ select::-ms-expand{
     width: 100%;
 }
 #poke-type-filter option:nth-child(even){
-    background-color: rgba(128, 128, 128, 0.555);
+    background-color: rgba(255, 255, 255, 0.404);;
 }
 #poke-type-filter option:nth-child(odd){
-    background-color: lightgrey;
+    background-color: rgba(255, 0, 0, 0.603);
 } 
 select option{
     color: black;
@@ -438,7 +439,6 @@ select option{
     background-color: rgba(255, 255, 255, 0);
     display: flex;
     justify-content: center;
-    padding: 0 0.5rem;
     flex-wrap: nowrap;
     align-items: center;
 }
@@ -486,16 +486,14 @@ select option{
         margin: .5rem;
     }
     .optionsDiv{
-        margin-right: 1rem;
+        margin: auto;
     }
     .modal .main-stats{
         width: 100%;
     }
 }
 
-/* DO cara nao sei o afeto que tem */
-
-@media only screen and (max-width: 650px){
+@media screen and (max-width: 650px){
     .content{
         height: auto;
     }
@@ -524,7 +522,7 @@ select option{
     }
     .select{
         margin: auto;
-        width: 10rem;
+        width: 14rem;
     }
     .optionsDiv{
         margin: 1rem auto .5rem;
@@ -566,6 +564,15 @@ select option{
     .modal .poke-story ul{
         margin: 0;
     }
+    .select{
+        position: relative;
+        display: flex;
+        width: 14rem;
+        background: #ff002d;
+        font-size: 1rem;
+        overflow: hidden;
+        border-radius: 1rem;
+    }
 }
 @media only screen and (max-width: 266px){
     .stats-board{
@@ -573,5 +580,14 @@ select option{
     }
     .modal{
         padding: 2px;
+    }
+    .select{
+        position: relative;
+        display: flex;
+        width: 14rem;
+        background: #ff002d;
+        font-size: 0.5rem;
+        overflow: hidden;
+        border-radius: 1rem;
     }
 }

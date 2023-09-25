@@ -1,6 +1,7 @@
 const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
 
+
 const maxRecords = 151
 let limit = 151
 let offset = 0;
@@ -17,7 +18,7 @@ function convertPokemonToLi(pokemon) {
     return `
         <li class="pokemon ${pokemon.types.map((type) => type).join(' ')}">
             <span class="number">#${pokemon.number}</span>
-            <span class="name">${pokemon.name}</span>
+            <span class="name" id = "name">${pokemon.name}</span>
 
             <div class="detail">
                 <ol class="types">
@@ -147,8 +148,8 @@ document.addEventListener('click', function(e){
 })
 
 let pokeSelect = document.querySelector('#poke-type-filter').addEventListener("click", filterByType)
+let BuscarSelect = document.querySelector('#btnBusca').addEventListener("click", filterByName)
 
- 
 // --------- filter pokemons ---------
 
 function filterByType (e){
@@ -156,6 +157,7 @@ function filterByType (e){
     let pokeValue = filterType.value
     let selectedType = pokemonList.getElementsByClassName("pokemon")
     let selectedTypeArr = Array.from(selectedType)
+
     selectedTypeArr.forEach(function(element){
         
         if (element.classList.contains(pokeValue)){
@@ -170,6 +172,31 @@ function filterByType (e){
     
 }
 
-function filterByName (){
 
-}
+function filterByName() {
+    // Define o valor do elemento 
+    const pokeTypeFilter = document.getElementById('poke-type-filter');
+    pokeTypeFilter.value = 'all';
+
+    // Atualiza visualmente o elemento 
+    const selectLabel = document.querySelector('.select .selected-label');
+    selectLabel.textContent = 'Todos os tipos';
+
+    // Força a atualização do elemento 
+    pokeTypeFilter.blur(); 
+    pokeTypeFilter.focus(); 
+    
+    const nameFilterInput = document.getElementById('txtBusca');
+    const nameFilterValue = nameFilterInput.value.toLowerCase(); // Obtém o valor digitado 
+
+    const pokemonElements = document.querySelectorAll('.pokemon'); // Seleciona todos os elementos com a classe "pokemon"
+
+    pokemonElements.forEach(function (element) {
+        const pokemonName = element.querySelector('.name').textContent.toLowerCase(); // Obtém o nome do Pokémon dentro do elemento
+        if (pokemonName.includes(nameFilterValue) || nameFilterValue === '') {
+            element.style.display = 'flex'; // Exibe 
+        } else {
+            element.style.display = 'none'; // Oculta 
+        }
+    });
+} 
