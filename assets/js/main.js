@@ -180,7 +180,7 @@ function filterByName() {
 
     // Atualiza visualmente o elemento 
     const selectLabel = document.querySelector('.select .selected-label');
-    selectLabel.textContent = 'Todos os tipos';
+    selectLabel.textContent = "Todos os tipos";
 
     // Força a atualização do elemento 
     pokeTypeFilter.blur(); 
